@@ -1,24 +1,5 @@
 # Hello World
 
-## File structure
-
-```sh
-|- dist # output of the file - configurable in tsconfig
-|- src # where all the code sits - configurable in tsconfig
-|   |- index.ts
-|   |- __tests__
-|       |- index.test.ts
-|- node_modules # this where the dependency are pulled into, you don't need to commit this.
-|- tsconfig.json # typescript compiler config
-|- package.json # scripts and dependencies are listed here
-|- yarn.lock
-|- .nvmrc # version of node
-|- .npmrc # ???
-|- .eslintrc.js
-|- .prettierrc
-|- jest.config.js
-```
-
 ## Start project
 
 ```sh
@@ -26,6 +7,12 @@ mkdir -p typescript-hello-world/src
 cd typescript-hello-world
 yarn init
 cat package.json
+```
+
+### Set the `.nvmrc`
+
+```sh
+nvm current > .nvmrc
 ```
 
 ### Add TypeScript
@@ -44,7 +31,7 @@ Once our code has transpiled to JavaScript, these dependencies are not required 
 ```sh
 cat << EOF > tsconfig.json
 {
-  "extends": "@tsconfig/node14/tsconfig.json"
+  "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "noEmitOnError": true // don't transpile the code if there's an error
@@ -60,8 +47,10 @@ EOF
 
 Within `src`, create `index.ts` with :
 
-```ts
+```sh
+cat << EOF > src/index.ts
 console.log("Hello World!");
+EOF
 ```
 
 ### rimraf
@@ -92,7 +81,3 @@ yarn install # or just yarn
 yarn build
 yarn start
 ```
-
-### XXX
-
-- `tsc --build` would like to understand this more.
