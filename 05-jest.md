@@ -10,6 +10,26 @@ yarn add --dev ts-jest @types/jest
 yarn ts-jest config:init
 ```
 
+## Configure the coverage settings in `jest.config.js`
+
+```json5
+{
+  // ---
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  }
+}
+```
+
+See more [here](https://jestjs.io/docs/configuration)
+
 ## Create some tests:
 
 ```sh
@@ -20,7 +40,7 @@ touch src/__tests__/index.test.ts
 ## Add some scripts to `package.json`
 
 
-```json
+```json5
 {
   // ---
   "scripts": {
@@ -48,7 +68,7 @@ Instead, we can split `tsconfig` into a few files.
 
 - `tsconfig.base.json`
 
-```json
+```json5
 // this tsconfig is used the language server and for testing
 {
   "extends": "@tsconfig/node14/tsconfig.json",
@@ -61,7 +81,7 @@ Instead, we can split `tsconfig` into a few files.
 
 - `tsconfig.json`
 
-```json
+```json5
 // this tsconfig is used the language server and for testing
 {
   "extends": "tsconfig.base.json",
@@ -75,7 +95,7 @@ Instead, we can split `tsconfig` into a few files.
 
 - `tsconfig.build.json`
 
-```json
+```json5
 // this tsconfig is used for transpile the code when building
 {
   "extends": "tsconfig.base.json",
@@ -90,7 +110,7 @@ Instead, we can split `tsconfig` into a few files.
 
 Update `package.json`.
 
-```json
+```json5
 {
   // ---
   "scripts": {
