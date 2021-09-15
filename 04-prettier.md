@@ -6,6 +6,8 @@ yarn add --dev prettier
 
 ## Prettier Config
 
+NB: Prettier recommends the `printWidth` of `80`. tl;dr Use what works for yourself or your team :)
+
 ```sh
 cat << EOF > .prettierrc
 {
@@ -16,7 +18,7 @@ EOF
 
 Add some scripts in `package.json`:
 
-```json
+```json5
 {
   // ---
   "scripts": {
@@ -42,7 +44,7 @@ yarn add --dev eslint-config-prettier
 
 `eslint-config-prettier` - disable the eslint rules that will conflict or are unnecessary with Prettier.
 
-```js
+```json5
 {
 // ---
 "extends": [
@@ -57,6 +59,6 @@ yarn add --dev eslint-config-prettier
 
 ## Recommended
 
-Setting up your editor to auto-format.....
+Setting up your editor to auto-format, this is just a recommedation and is optional. From experience I've found it to be quite useful!
 
 https://prettier.io/docs/en/editors.html
