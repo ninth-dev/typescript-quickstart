@@ -35,14 +35,13 @@ Brief overview on how to setup a TypeScript project. This doesn't go through Typ
 
 ### Learning Resources
 
-
 ### TypeScript
 
-Free - https://www.typescriptlang.org/docs/handbook/intro.html
-Free - https://basarat.gitbook.io/typescript/
-Free - https://github.com/typescript-exercises/typescript-exercises
-$ - https://www.oreilly.com/library/view/programming-typescript/9781492037644/
-$ - https://effectivetypescript.com/
+- Free - https://www.typescriptlang.org/docs/handbook/intro.html
+- Free - https://basarat.gitbook.io/typescript/
+- Free - https://github.com/typescript-exercises/typescript-exercises
+- $ - https://www.oreilly.com/library/view/programming-typescript/9781492037644/
+- $ - https://effectivetypescript.com/
 
 
 ### Lambda
