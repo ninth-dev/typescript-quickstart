@@ -58,7 +58,7 @@ echo "dist" > .eslintignore
 
 Add scripts to `package.json`
 
-```json
+```json5
 {
   // ---
   "scripts": {
@@ -99,8 +99,6 @@ Add scripts to `package.json`
 ```
 yarn add --dev eslint eslint-plugin-jest
 ```
-
-## [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest)
 
 ## [eslint-plugin-fp]()
 
